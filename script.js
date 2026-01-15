@@ -43,16 +43,7 @@ function recordLap() {
   }
 }
 
-// Theme Toggle
+// ✅ Fixed Theme Toggle
 document.getElementById('themeToggle').addEventListener('click', () => {
-  const root = document.documentElement;
-  if (root.style.getPropertyValue('--bg-color') === '#f0f4f8') {
-    root.style.setProperty('--bg-color', '#121212');
-    root.style.setProperty('--text-color', '#f0f4f8');
-    root.style.setProperty('--accent-color', '#ff9800');
-  } else {
-    root.style.setProperty('--bg-color', '#f0f4f8');
-    root.style.setProperty('--text-color', '#333');
-    root.style.setProperty('--accent-color', '#007bff');
-  }
+  document.body.classList.toggle('dark-theme');
 });
