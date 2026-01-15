@@ -13,8 +13,15 @@ body {
   padding: 0;
 }
 
+/* Dark Theme Overrides */
+body.dark-theme {
+  --bg-color: #121212;
+  --text-color: #f0f4f8;
+  --accent-color: #ff9800;
+}
+
 header {
-  background: linear-gradient(90deg, #007bff, #00c6ff);
+  background: linear-gradient(90deg, var(--accent-color), #00c6ff);
   color: white;
   padding: 15px;
   display: flex;
@@ -64,6 +71,6 @@ header {
 footer {
   margin-top: 30px;
   padding: 10px;
-  background: #007bff;
+  background: var(--accent-color);
   color: white;
 }
